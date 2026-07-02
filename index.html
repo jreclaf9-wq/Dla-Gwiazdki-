@@ -1,0 +1,39 @@
+<!doctype html><html lang="pl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dla Marty ❤️</title>
+<style>
+body{margin:0;background:#080203;color:#fff;font-family:system-ui;text-align:center;overflow-x:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;
+background:radial-gradient(circle,#3b0014,#080203 70%)}
+h1{font-size:3.4rem;color:#ff6f91;margin:.2em}
+.rose{font-size:8rem;filter:drop-shadow(0 0 18px #f33);animation:bloom 2.4s infinite}
+@keyframes bloom{50%{transform:scale(1.08)}}
+.btn{background:#c2185b;color:#fff;border:none;padding:16px 28px;border-radius:40px;font-size:1.1rem;cursor:pointer}
+#msg{display:none;max-width:700px;margin:25px auto;background:#17050c;padding:20px;border-radius:18px;border:1px solid #ff4d7a}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;padding:20px}
+.pic{width:100%;border-radius:18px;box-shadow:0 0 18px rgba(255,80,120,.4)}
+.heart{position:fixed;top:-10px;color:#ff4d7a;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh)}}
+.small{opacity:.8}
+</style></head><body>
+<section class="hero">
+<div class="rose">🌹</div>
+<h1>Dla Marty</h1>
+<p>Ta róża nigdy nie zwiędnie, tak jak moja miłość do Ciebie.</p>
+<button class="btn" onclick="document.getElementById('msg').style.display='block';this.style.display='none'">Otwórz wiadomość ❤️</button>
+<div id="msg">
+<h2>Kocham Cię, Marto ❤️</h2>
+<p>Dziękuję za każdą wspólną chwilę, za każdy uśmiech i każde przytulenie.
+Ta strona jest małym prezentem, który zawsze będzie przypominał Ci, jak wiele dla mnie znaczysz.</p>
+<p><b>Na zawsze Twój — Kuba.</b></p>
+<p class="small">🎵 Możesz dodać własny plik MP3 z ulubioną piosenką.</p>
+</div>
+</section>
+<h2>Nasze wspomnienia 📸</h2>
+<div class="grid"><img src="photo1.jpg" class="pic"><img src="photo2.jpg" class="pic"><img src="photo3.jpg" class="pic"><img src="photo4.jpg" class="pic"><img src="photo5.jpg" class="pic"><img src="photo6.jpg" class="pic"></div>
+<script>
+for(let i=0;i<60;i++){let h=document.createElement('div');h.className='heart';h.textContent='❤';
+h.style.left=Math.random()*100+'vw';h.style.animationDuration=(4+Math.random()*7)+'s';
+h.style.animationDelay=(-Math.random()*8)+'s';document.body.appendChild(h);}
+</script>
+</body></html>
